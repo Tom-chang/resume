@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		li{
+			list-style:none;
+		}
+		.form{
+			margin:0 0 0 30px;
+		}
+	</style>
+</head>
+<body>
+	<form action="form_action.php" method="post">
+		<div class="form">
+			<ul>
+				<li>
+					<label>用户名：</label>
+					<input type="text" name="username" placeholder="请输入用户名">
+				</li>
+				<li>
+					<label>密码：</label>
+					<input type="password" name="password" placeholder="请输入密码">
+				</li>
+				<li>
+					<label>性别：</label>
+					<input type="radio" name="sex" value="男"> 男
+					<input type="radio" name="sex" value="女"> 女
+				</li>
+				<li>
+					<label>取向：</label>
+					<input type="radio" name="tropism" value="男"> 男
+					<input type="radio" name="tropism" value="女"> 女
+				</li>
+				<li>
+					<label>爱好：</label>
+					<input type="checkbox" name="hobby" value="data"> data
+					<input type="checkbox" name="hobby" value="tourism"> 旅游
+					<input type="checkbox" name="hobby" value="pet"> 宠物
+				</li>
+				<li>
+					<label>评论：</label>
+					<textarea name="commentary" id="commentary" cols="30" rows="10" placeholder="ddd"></textarea>
+				</li>
+				<li>
+					<label>My car：</label>
+					<select name="car" id="car">
+						<option value="lanbo">兰博基尼</option>
+						<option value="byd">比亚迪</option>
+						<option value="aodi">奥迪</option>
+						<option value="benchi">奔驰</option>
+						<option value="qirui">奇瑞</option>
+					</select>
+				</li>
+				<li>
+					<button>提交</button>
+				</li>
+			</ul>
+		</div>
+	</form>
+</body>
+</html>
