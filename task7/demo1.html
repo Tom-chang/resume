@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS继承</title>
+	<style>
+		.container{
+			color: red;
+			text-decoration: underline;
+			text-align: justify;
+			font:20px/1.5 "\5FAE\8F6F\96C5\9ED1",Arial;
+			border:1px solid blue;
+			margin:20px;
+			padding:10px;
+			background: #eee;
+			width:500px;
+			height:500px;
+			word-wrap: break-word;
+			/*overflow: hidden;*/
+		}
+	</style>
+</head>
+<body>	
+	<div class="container">
+		<div class="panel">
+			<p>继承是指包在内部的标签将拥有外部标签的样式性，即子元素可以继承父元素的样式</p>
+			<p>在CSS中以text-、font-、line-、list-style-开头的属性和color、letter-spacing、word-spacing都是可以继承的</p>
+		</div>
+		<div class="panel">
+			<div class="box">
+				<p>
+					border,margin,padding,width,height,background,display,position,top,right,bottom,left,z-index,float,clear不继承的
+				</p>				
+				<a href="#">a标签的字体颜色有默认样式，不能继承父元素的</a>	
+				<h2>h标签的字体大小有默认样式，不能继承父元素的</h2>			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
