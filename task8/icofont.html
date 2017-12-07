@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>IcoFont</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			margin-left: 30px;
+		}
+		.form li{
+			margin: 5px 0;
+		}
+
+		/*引入字体，无论是用unicode还是font class都需要引入字体文件*/
+		@font-face {
+  			font-family: 'iconfont';
+  			src: url('//at.alicdn.com/t/font_501534_tnuovrw7d2o9lik9.eot');
+  			src: url('//at.alicdn.com/t/font_501534_tnuovrw7d2o9lik9.eot?#iefix') format('embedded-opentype'),
+  			url('//at.alicdn.com/t/font_501534_tnuovrw7d2o9lik9.woff') format('woff'),
+  			url('//at.alicdn.com/t/font_501534_tnuovrw7d2o9lik9.ttf') format('truetype'),
+  			url('//at.alicdn.com/t/font_501534_tnuovrw7d2o9lik9.svg#iconfont') format('svg');
+		}
+
+		/*Unicode Start*/
+		.search{
+			font-family: "iconfont";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-left: 5px;
+		}
+		.cart{
+			font-family: "iconfont";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-left: 5px;			
+		}
+		/*Unicode End*/
+		
+		/*Font Class Start*/
+		.iconfont {
+ 			font-family:"iconfont" !important;
+  			font-size:16px;
+ 			font-style:normal;
+  			-webkit-font-smoothing: antialiased;
+  			-moz-osx-font-smoothing: grayscale;
+  			margin-left: 5px;
+  			width: 20px;
+  			height: 20px;
+		}
+
+		.icon-cart:before { content: "\e6ba"; }
+
+		.icon-search:before { content: "\e88f"; }
+		 
+		/*Font Class End*/		
+
+		.search-input{
+			height: 20px;
+		}
+		.add-cart{
+			height: 20px;
+			line-height: 20px;
+			background: none;
+			border: 1px solid #bbb;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Unicode</h2>
+		<div class="form">
+			<ul>
+				<li><input type="text" class="search-input"><span class="search">&#xe60a;</span></li>
+				<li><button class="add-cart">加入购物车</button><span class="cart">&#xe600;</span></li>
+			</ul>
+		</div>
+		<h2>Font Class</h2>
+		<div class="form">
+			<ul>
+				<li><input type="text" class="search-input"><span class="iconfont icon-search"></span></li>
+				<li><button class="add-cart">加入购物车</button><span class="iconfont icon-cart"></span></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

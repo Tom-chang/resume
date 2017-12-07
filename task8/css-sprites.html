@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Sprites</title>
+	<style>
+		.imgbtn{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: transparent url("images/css_sprites.png") no-repeat;
+		}
+		.searchbox>input{
+			vertical-align: top;
+			height: 20px;
+		}
+		.search{
+			background-position: -10px -10px;
+		}
+		.buy{
+			margin-top: 15px;
+		}
+		.buy>button{
+			vertical-align: top;
+			height: 20px;
+			line-height: 20px;
+			background: none;
+			border: 1px solid #bbb;
+			border-radius: 5px;
+		}
+		.cart{
+			background-position: -50px -8px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="searchbox">
+			<input type="text">
+			<span class="imgbtn search"></span>
+		</div>
+		<div class="buy">
+			<button>加入购物车</button>
+			<span class="imgbtn cart"></span>
+		</div>
+	</div>
+</body>
+</html>
