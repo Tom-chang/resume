@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>图片在块级元素中垂直水平居中</title>
+	<style>
+		.box{
+			width: 500px;
+			height: 600px;
+			border: 1px solid #333;
+			text-align: center;
+		}
+		.box::before{
+			content: '';
+			display: inline-block;			
+			height: 100%;
+			vertical-align: middle;
+		}
+		.box img{
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>	
+	<div class="box">
+		<img src="https://jirengu.com/data/upload/2017/0118/17/587f39fba695a.png" alt="">
+	</div>
+</body>
+</html>

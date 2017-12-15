@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>宽高不定块级元素垂直水平居中</title>
+	<style>
+		.box{
+			background-color: #ddd;
+			display: inline-block;
+			padding: 10px;
+			text-align: center;
+			box-sizing: border-box;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>标题</h1>
+		<p>这是内容，内容的宽高不定</p>
+	</div>
+</body>
+</html>
