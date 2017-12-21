@@ -1,0 +1,398 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{	
+	font: 14px/1.5 "微软雅黑","宋体",Arial;
+	color: #333;	
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.layout {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.button {
+	display: inline-block;
+	padding: 20px 40px;
+	background-color: #fed136;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 5px;	
+	font-weight: bold;
+}
+.button:hover {
+	background: #ffd700;
+}
+
+/**/
+
+html,
+body {
+	height: 100%;
+}
+header {
+	position: relative;
+	height: 100%;
+	min-height: 600px;	
+	background: #fff url("../images/header-banner.jpg") center center no-repeat;
+	background-size: cover;	
+}
+header::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.1);	
+}
+header .logo {
+	float: left;
+	font-size: 32px;
+	color: #fed136;
+	margin-top: 10px;
+}
+nav {
+	position: relative;
+	z-index: 1;
+}
+nav > ul {
+	float: right;
+}
+nav > ul > li {
+	float: left;
+	margin: 10px;
+}
+nav li a{
+	font-size: 16px;
+	color: #333;
+	display: inline-block;
+	padding: 5px;
+}
+nav li a:hover{
+	color: #fff;
+	background: #fed136;
+}
+
+header .introduction {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color: #fed136;
+}
+
+.introduction h1 {
+	font-size: 26px;
+}
+.introduction h2 {
+	font-size: 42px;
+	margin: 20px 0;
+}
+
+/**/
+section {
+	text-align: center;
+	padding: 50px 0;
+}
+section:nth-child(even) {
+	background: #eee;
+}
+section > h2 {
+	margin-top: 120px;
+	font-size: 36px;
+}
+section > p {
+	margin-top: 10px;
+	font-style: italic;
+	color: #aaa;
+}
+section .services {
+	margin-top: 60px;
+}
+section .services > li {
+	float: left;
+	width: 33.33%;
+	padding: 10px 20px;
+}
+section .services > li .iconfont {
+	font-size: 80px;
+}
+section .services > li > h2 {
+	margin-top: 20px;
+}
+section .services p{
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.iconfont {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;    
+}
+
+/**/
+section .news {
+	margin-top: 60px;
+}
+section .news figure {
+	width: calc(33.33% - 20px);
+	margin: 10px;
+	float: left;
+	background: #fff;
+}
+section .news a {
+	display: block;	
+	position: relative;
+	height: 200px;
+}
+section .news a:hover::before {
+	content: '+';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fed136;
+	opacity: 0.8;
+	color: #fff;
+	font-size: 80px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .news img {
+	width: 100%;
+	height: 100%;
+}
+section .news figcaption {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+section .news p {	
+	margin: 10px 10px 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/**/
+section .timeline {
+	margin-top: 60px;	
+	position: relative;
+}
+section .timeline::before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 100%;	
+	background: #add8e6;
+}
+section .timeline > li {
+	margin-top: 60px;
+	position: relative;
+}
+section .timeline > li::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+section .timeline img,
+section .timeline .img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 6px solid #add8e6;
+}
+section .timeline .img{	
+	display: inline-block;
+	padding: 30px 2px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;		
+	background: #add8e6;
+}
+section .timeline > li:nth-child(odd) {
+	padding-right: calc(50% - 60px);
+	text-align: right;
+}
+section .timeline > li:nth-child(odd) img{
+	float: right;
+}
+section .timeline > li:nth-child(odd) dl {
+	margin-right: 150px;
+}
+section .timeline > li:nth-child(even) {
+	text-align: left;
+	padding-left: calc(50% - 60px);
+}
+section .timeline > li:nth-child(even) img {
+	float: left;
+}
+section .timeline > li:nth-child(even) dl {
+	margin-left: 150px;
+}
+section .timeline dt {
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+}
+section .timeline dd:nth-of-type(1) {
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+}
+section .timeline dd:nth-of-type(2) {
+	font-size: 14px;
+	color: #999;
+	margin-top: 10px;
+}
+
+/**/
+section .team {
+	margin-top: 60px;
+}
+section .team figure {
+	float: left;
+	margin: 10px;
+	width: calc(33.33% - 20px);
+}
+section .team img {
+	border: 6px solid #fff;
+	border-radius: 50%;
+}
+section .team figcaption {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+section .team p{
+	color: #666;
+}
+section .team a {
+	display: inline-block;
+	padding: 10px 5px 0;
+	font-size: 15px;
+	color: #000;
+}
+section .team .iconfont {
+	font-size: 40px;
+}
+section .team .iconfont:hover {
+	fill: #fed136;
+}
+section .team-description {
+	margin: 0 auto;
+	padding: 50px 260px 150px;
+	max-height: 940px;
+	font-size: 16px;
+	font-style: normal;
+	color: #777;
+}
+/**/
+section .links {	
+	display: flex;
+}
+section .links > li {
+	float: left;
+	flex: 1;
+}
+
+/**/
+section.contacts {
+	background: #222 url("../images/map-image.png") no-repeat;
+}
+section.contacts > h2 {
+	color: #fff;
+}
+section.contacts .form {
+	margin: 50px;
+}
+section.contacts .form dl {
+	float: left;
+	width: 48%;
+}
+section.contacts .form dl input {
+	width: 100%;
+	padding: 20px;
+	margin-top: 24px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	font-size: 14px;
+	font-family: "微软雅黑",Arial;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+section.contacts .form textarea {
+	float: right;
+	margin-top: 24px;
+	padding: 20px;
+	width: 48%;
+	height: 231px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	font-size: 14px;
+	font-family: "微软雅黑",Arial;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-size: 14px;
+	font-family: "微软雅黑",Arial;
+	font-weight: bold;
+	color: #bbb;
+}
+.form-btn {
+	margin-top: 24px;
+}
+
+/**/
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 26px 60px;	
+	font-size: 14px;
+}
+footer ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+footer ul > li {
+	margin: 0 8px;
+}
+footer .footer-share-links .iconfont {
+	font-size: 40px;
+	color: #000;
+}
+footer .footer-share-links .iconfont:hover {
+	fill: #fed136;
+}
+footer .footer-links a {
+	color: #fed136;
+}
+footer .footer-links a:hover {
+	text-decoration: underline;
+}
