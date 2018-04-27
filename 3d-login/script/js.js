@@ -40,7 +40,7 @@ $(".modal-login form").addEventListener("submit",function(e){
 		$(".modal-login .errormsg").innerText = "密码需输入6-10个字符，包括字母数字下划线";
 		return false;
 	}
-	this.submit;
+	this.submit();
 });
 
 $(".modal-reg form").addEventListener("submit",function(e){
@@ -61,5 +61,5 @@ $(".modal-reg form").addEventListener("submit",function(e){
 		$(".modal-reg .errormsg").innerText = "两次密码输入不一致";
 		return false;
 	}
-	this.submit;
+	this.submit();
 });
