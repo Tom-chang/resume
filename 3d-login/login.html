@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>3D-登录</title>
+	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/font-awesome.min.css">	
+</head>
+<body>
+	<header>
+		<a href="#" id="login"><i class="fa fa-user-circle"></i></a>
+	</header>
+	<main>
+		<div class="flip-modal login">
+			<div class="modal modal-login">
+				<a href="#" class="close fa fa-close"></a>
+				<div class="tabs">
+					<a href="#" class="login active">登录</a>
+					<a href="#" class="reg">注册</a>
+				</div>
+				<form action="/login.html" method="post">				
+				<div class="form">
+					<div class="errormsg"></div>
+					<ul>
+						<li><i class="fa fa-user-o"></i><input type="text" name="username" placeholder="用户名"></li>
+						<li><i class="fa fa-lock"></i><input type="password" name="pwd" placeholder="密码"></li>
+						<li><input type="submit" value="登录"></li>
+					</ul>
+				</div>
+				</form>
+			</div>
+			<div class="modal modal-reg">
+				<a href="#" class="close fa fa-close"></a>
+				<div class="tabs">
+					<a href="#" class="login">登录</a>
+					<a href="#" class="reg active">注册</a>
+				</div>
+				<form action="/login.html" method="post">
+				<div class="form">
+					<div class="errormsg"></div>
+					<ul>
+						<li><i class="fa fa-user-o"></i><input type="text" name="username" placeholder="请输入用户名"></li>
+						<li><i class="fa fa-lock"></i><input type="password" name="pwd" placeholder="请输入密码"></li>
+						<li><i class="fa fa-lock"></i><input type="password" name="repwd" placeholder="请再次输入密码"></li>
+						<li><input type="submit" value="注册"></li>
+					</ul>
+				</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<script src="script/js.js"></script>
+</body>
+</html>
