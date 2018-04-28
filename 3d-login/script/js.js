@@ -9,20 +9,29 @@ $("#login").addEventListener("click",function(e){
 })
 
 //点击空白地方登录弹框消失
-document.addEventListener("click",function(e){
+
+function modalHide(){
 	$(".flip-modal").style.display = "none";
-})
+}
+
+function documentClick(){
+	document.addEventListener("click",modalHide);
+}
+
+document.addEventListener("transitionend",documentClick); //过渡完成之后执行documentClick函数
 
 // 点击注册和登录切换
 $(".flip-modal").addEventListener("click",function(e){
 	e.stopPropagation();	//防止冒泡到document
 	if(e.target.classList.contains("reg")){
 		$(".flip-modal").classList.remove("login");
-		$(".flip-modal").classList.add("register");		
+		$(".flip-modal").classList.add("register");
+		document.removeEventListener("click",modalHide);
 	}
 	if(e.target.classList.contains("login")){
 		$(".flip-modal").classList.remove("register");
 		$(".flip-modal").classList.add("login");
+		document.removeEventListener("click",modalHide);
 	}
 	if(e.target.classList.contains("close")){
 		$(".flip-modal").style.display = "none";

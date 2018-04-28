@@ -93,7 +93,7 @@ header a{
 .flip-modal.register .modal-reg{
 	transition: translate(-50%,-50%) rotateY(0deg);
 	backface-visibility: hidden;
-	transition: all 3s;
+	transition: all 1s;
 }
 
 /*默认状态下注册表单的状态*/
@@ -101,7 +101,7 @@ header a{
 .flip-modal.register .modal-login{
 	transform: translate(-50%,-50%) rotateY(180deg);
 	backface-visibility: hidden;
-	transition: all 3s;
+	transition: all 1s;
 }
 
 
