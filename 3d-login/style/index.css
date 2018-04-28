@@ -91,7 +91,7 @@ header a{
 /*默认状态下登录表单的状态*/
 .flip-modal.login .modal-login,
 .flip-modal.register .modal-reg{
-	transition: translate(-50%,-50%) rotateY(0deg);
+	transform: translate(-50%,-50%) rotateY(0deg);
 	backface-visibility: hidden;
 	transition: all 1s;
 }
