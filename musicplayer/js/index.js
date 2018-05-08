@@ -21,6 +21,7 @@ var currentIndex = 0;
 var musicIndex;
 var musicList = [];
 var interval;
+var volHistory;
 var audio = new Audio();
 audio.autoplay = true;
 
@@ -126,6 +127,26 @@ $(".music-panel .vol-bar").addEventListener("click",function(e){
     var percent = e.offsetX / parseInt(getComputedStyle(this).width);
     $(".music-panel .vol-now").style.width = percent*100 + "%";
     audio.volume = percent;
+    volHistory = audio.volume;
+});
+
+audio.addEventListener("volumechange",function(){
+    var percent = audio.volume / 1;
+    $(".music-panel .vol-now").style.width = percent*100 + "%";
+    if(this.volume > 0){
+        $(".music-panel .vol-icon .iconfont").classList.remove("icon-mute");
+        $(".music-panel .vol-icon .iconfont").classList.add("icon-volume");
+    }
+});
+
+$(".music-panel .vol-icon").addEventListener("click",function(e){
+    if(audio.volume === 0){
+        audio.volume = volHistory;
+    }else{
+        audio.volume = 0;
+    }
+    e.target.classList.toggle("icon-volume")
+    e.target.classList.toggle("icon-mute");
 });
 
 //将秒转换为分钟
