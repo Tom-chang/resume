@@ -8,11 +8,11 @@
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_654654_llmbptdmp62h85mi.css">
 	<script>
 		document.onreadystatechange = function(){
-			if(document.readyState === "complete"){
-				document.querySelector(".loading").style.display = "none";
+			if(document.readyState === "complete"){				
 				var scripts = document.createElement("script");
 				scripts.setAttribute("src","js/index.js");
 				document.body.appendChild(scripts);
+				document.querySelector(".loading").style.display = "none";
 			}
 		}
 	</script>
