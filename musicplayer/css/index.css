@@ -1,0 +1,145 @@
+body{
+    box-sizing: border-box;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+}
+.loading::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 64px;
+    height: 64px;
+    background: url("../images/25.gif");
+}
+
+.cover{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: center center no-repeat;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    width: 400px;
+    box-shadow: 2px 2px 5px #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.music-panel{
+    padding: 20px 20px 10px;
+    /* background: #000; */
+}
+
+.music-panel .control{
+    margin-top: 18px; 
+    float: left;        
+}
+.music-panel .control span{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.music-panel .control .icon-play,
+.music-panel .control .icon-pause{
+    font-size: 18px;
+}
+
+.music-panel .info{
+    margin-left: 150px;    
+}
+
+.music-panel .info .music-name{
+    font-size: 18px;
+}
+.music-panel .info .author{
+    font-size: 12px;
+}
+
+.music-panel .progress{    
+    width: 100%;
+}
+.music-panel .progress .bar{
+    margin-top: 10px;
+    height: 5px;
+    background: #eee;
+    cursor: pointer;
+}
+
+.music-panel .progress .progress-now{
+    position: relative;
+    width: 0;
+    height: 5px;
+    background: #ff0000;
+}
+
+.music-panel .progress .volume{
+    float: left;
+    margin-top: 6px;
+}
+.music-panel .progress .vol-icon{
+    float: left;
+}
+
+.music-panel .progress .vol-bar{
+    margin: 8px 0 0 20px;
+    width: 100px;
+    height: 5px;
+    background: #666;
+    cursor: pointer;
+}
+
+.music-panel .progress .vol-now{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #ffd900;
+}
+
+.music-panel .music-time{
+    margin-top: 3px;
+    text-align: right;
+}
+
+.music-list{    
+    padding-top: 10px;
+    border-top: none;
+}
+
+.music-list li a{
+    display: block;
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+}
+.music-list li a:hover{
+    background: #eee;
+    border-left: 3px solid rgb(243, 6, 6);
+}
+.music-list .active{
+    color: rgb(243, 6, 6);
+    background: #eee;
+    border-left: 3px solid rgb(243, 6, 6);
+}

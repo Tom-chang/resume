@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>音乐播放器</title>
+	<link rel="stylesheet" href="css/reset.css">	
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_654654_llmbptdmp62h85mi.css">
+	<script>
+		document.onreadystatechange = function(){
+			if(document.readyState === "complete"){
+				document.querySelector(".loading").style.display = "none";
+				var scripts = document.createElement("script");
+				scripts.setAttribute("src","js/index.js");
+				document.body.appendChild(scripts);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="loading"></div>
+	<div class="cover"></div>
+	<div class="container">
+		<div class="music-panel">
+			<div class="music clearfix">
+				<div class="control">
+					<span class="previous"><i class="iconfont icon-previous"></i></span>
+					<span class="play"><i class="iconfont icon-pause"></i></span>
+					<span class="next"><i class="iconfont icon-next"></i></span>
+				</div>
+				<div class="info">
+					<div class="music-name">歌曲名</div>
+					<div class="author">作者</div>
+				</div>
+			</div>
+			<div class="progress clearfix">
+				<div class="bar">
+					<div class="progress-total"></div>
+					<div class="progress-now"></div>
+				</div>
+				<div class="volume clearfix">
+					<span class="vol-icon"><i class="iconfont icon-volume"></i></span>
+					<div class="vol-bar">
+						<div class="vol-totl"></div>
+						<div class="vol-now"></div>
+					</div>
+				</div>
+				<div class="music-time"><span class="music-time-now"></span>/<span class="music-time-duration"></span></div>
+			</div>
+		</div>
+		<ul class="music-list">
+			<!-- <li><a href="#" class="active">韩雪-想起</a></li>
+			<li><a href="#">青鸟飞鱼-此生不换</a></li> -->
+		</ul>
+	</div>
+	<!-- <script src="js/index.js"></script> -->
+</body>
+</html>
