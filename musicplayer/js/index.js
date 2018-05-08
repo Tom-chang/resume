@@ -81,7 +81,11 @@ audio.addEventListener("pause",function(){
 });
 
 audio.addEventListener("ended",function(){
-    currentIndex = (++currentIndex) % musicList.length
+    currentIndex = (++currentIndex) % musicList.length;
+    for(var i=0;i<$(".music-list").children.length;i++){
+        $(".music-list").children[i].children[0].classList.remove("active");
+    }
+    $(".music-list").children[currentIndex].children[0].classList.add("active");
     loadMusic(musicList[currentIndex]);
 });
 
