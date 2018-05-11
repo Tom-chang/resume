@@ -102,6 +102,7 @@ body{
 }
 .music-panel .progress .vol-icon{
     float: left;
+    cursor: pointer;
 }
 
 .music-panel .progress .vol-bar{

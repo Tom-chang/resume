@@ -21,7 +21,7 @@ var currentIndex = 0;
 var musicIndex;
 var musicList = [];
 var interval;
-var volHistory;
+var volHistory = 1;
 var audio = new Audio();
 audio.autoplay = true;
 
