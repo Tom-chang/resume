@@ -1,0 +1,35 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li, 
+pre, figure,
+fieldset, lengend, button, input, textarea,
+th, td { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+}
+input {
+    outline: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:#ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:#ccc;
+}

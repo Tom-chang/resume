@@ -1,0 +1,134 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    position: relative;
+    box-sizing: border-box;
+    font-size: 12px/1.5;
+}
+
+main{
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /*ios 上增加弹性*/
+}
+
+main section{
+    padding: 10px;
+    display: none;
+}
+
+main section:first-child{
+    display: block;
+}
+
+.list li{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.list li>a{
+    display: block;
+}
+.list li>a::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.list .img{
+    float: left;
+}
+
+.list img{
+    width: 80px;
+}
+
+.list .information{
+    margin-left: 100px;
+    color: #aaa;
+}
+
+.list .title{
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.list .score-red{
+    color: #ff5722;
+}
+
+.search-area{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-area input{
+    padding: 9px 10px;
+    width: calc(100% - 54px);
+    background: #eee;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+}
+
+.search-area button{
+    padding: 8px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background: #ff5722;
+}
+
+#search .msg{
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.loading{
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+}
+
+.loading .iconfont{
+    display: inline-block;
+    animation: 1s rotate linear infinite;
+}
+
+@keyframes rotate{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-top: 1px solid #aaa;
+    background: #fff;
+}
+footer ul{
+    display: flex;
+}
+footer li{
+    flex: 1;
+    padding-top: 10px; 
+}
+
+footer li span{
+    display: block;
+}
+
+footer .active span{
+    color: #ff6600;
+}
