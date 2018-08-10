@@ -1,0 +1,211 @@
+html,body,section{
+	height: 100%;
+	overflow: hidden;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body{
+	font: 14px/1.5 cursive
+}
+
+main{
+	padding-top: 12vh;
+	box-sizing: border-box;
+	height: calc(100% - 24vh);
+	display: flex;
+}
+
+.layout{
+	margin: 0 auto;
+	width: 600px;
+}
+
+@media (min-width: 700px){
+	.layout{
+		width: 600px;
+	}
+}
+@media (min-width: 900px) {
+	.layout{
+		width: 800px;
+	}
+}
+@media (min-width: 1000px) {
+	.layout{
+		width: 900px;
+	}
+}
+@media (min-width: 1200px) {
+	.layout{
+		width: 1100px;
+	}
+}
+
+main aside{		
+	/*border: 1px solid;*/
+}
+main>aside>figure{
+	width: 46vh;
+	height: 46vh;
+	background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532088351106&di=7029d69417653e7c67409a3b95951200&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F84%2F21%2F300000209541127771219134501_950.jpg") center center no-repeat;
+	background-size: cover;
+}
+aside .actions{
+	margin-top: 4vh;
+	display: flex;
+}
+aside .iconfont{
+	flex: 1;
+	font-size: 6vh;
+	text-align: center;
+	color: rgba(255,255,255,0.4);
+	transition: color .4s;
+	cursor: pointer;
+}
+aside .iconfont:hover{
+	color: #fff;
+}
+main .info{
+	flex: 1;
+	margin-left: 10vh;
+	color: #fff;
+	/*border: 1px solid;*/
+}
+
+.info .tag{
+	padding: .8vh 1.6vh;
+	font-size: 2vh;
+	background: #2e6eec;
+}
+
+.info h1{
+	margin-top: 2vh;
+	font-size: 6vh;
+}
+
+.info .icons{
+	margin-top: 12vh;
+	display: flex;
+	font-size: 3vh;
+}
+.info .icons li{
+	flex: 1;
+}
+.info .iconfont{
+	margin-right: 1vh;
+	font-size: 3vh;
+}
+.info .area-bar{
+	margin-top: 10vh;
+	display: flex;
+	align-items: center;
+}
+.info .bar{
+	position: relative;
+	flex: 1;
+	height: .8vh;
+	background: #fff; 
+}
+.info .bar .bar-progress{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10%;
+	height: .8vh;
+	background: #ff0000;
+}
+.info .current-time{
+	margin-left: 1vh;
+	font-size: 2vh;
+	color: #fff;
+}
+
+.info .author{
+	margin-top: 2vh;
+	font-size: 14px;
+}
+.info .lyric{
+	margin-top: 2vh;
+	font-size: 3vh;
+}
+footer{
+	height: 24vh;
+	background: rgba(255,255,255,0.4);
+	color: #fff;
+}
+footer>.layout{
+	position: relative;
+}
+footer .iconfont{
+	position: absolute;
+	top: 4vh;
+	font-size: 6vh;
+	color: #fff;
+}
+footer .icon-arrow-left{
+	left: -8vh;
+}
+footer .icon-arrow-right{
+	right: -8vh;
+}
+footer .box{
+	position: relative;
+	height: 24vh;
+	overflow: hidden;
+}
+footer ul{
+	/*display: flex;*/
+	position: absolute;
+	left: 0;
+}
+
+footer li{
+	float: left;
+	margin-top: 1vh;
+	margin: 2vh 2vh 0 2vh;
+	width: 20vh;
+	height: 20vh;
+	text-align: center;
+	cursor: pointer;
+}
+footer li:hover,
+footer li.active{
+  box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+}
+
+footer li .images{
+	height: 16vh;
+	background-size: cover;
+	background-position: center center; 
+}
+footer li h3{
+	margin-top: 1vh;
+	font-size: 2vh;
+	color: #fff;
+}
+.bg{
+	position: absolute;
+	z-index: -1;
+	top: -10px;
+	left: -10px;
+	right: -10px;
+	bottom: -10px;
+	background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532088351106&di=7029d69417653e7c67409a3b95951200&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F84%2F21%2F300000209541127771219134501_950.jpg") center center no-repeat;
+	background-size: cover;
+	/*background: #000;*/
+	filter: blur(4px);
+}
+.bg::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	display: block;
+	background: rgba(0,0,0,0.4);
+}
