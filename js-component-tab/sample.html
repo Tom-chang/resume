@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象Tab组件</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0
+		}
+		body{
+			box-sizing: content-box;
+		}
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.tabs span{
+			float: left;
+			padding: 6px;
+			display: block;
+			border: 1px solid #eee;
+		}
+		.tabs span.active{
+			background: #33ff33;
+		}
+		.tab-container .content{
+			display: none;
+		}
+		.tab-container .content.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="tab-container">
+			<div class="tabs clearfix">
+				<span class="active">1</span>
+				<span>2</span>
+				<span>3</span>
+			</div>
+			<div class="tab-content">
+				<div class="content active">这是内容1</div>
+				<div class="content">这是内容2</div>
+				<div class="content">这是内容3</div>
+			</div>			
+		</div>
+		<div class="tab-container">
+			<div class="tabs clearfix">
+				<span class="active">4</span>
+				<span>5</span>
+				<span>6</span>
+			</div>
+			<div class="tab-content">
+				<div class="content active">这是内容4</div>
+				<div class="content">这是内容5</div>
+				<div class="content">这是内容6</div>
+			</div>			
+		</div>
+	</div>
+	<script src="tab.js"></script>
+	<script>
+		// document.querySelectorAll(".tab-container")[0].querySelector(".tabs").addEventListener("click",function(e){
+		// 	var _index;
+		// 	this.querySelectorAll("span").forEach(function(ele,index){
+		// 		ele.classList.remove("active");
+		// 		if(e.target == ele){
+		// 			_index = index;
+		// 		}
+		// 	});
+		// 	e.target.classList.add("active");
+		// 	this.nextElementSibling.querySelectorAll(".content").forEach(function(ele,index){
+		// 		ele.classList.remove("active");
+		// 		if(index === _index){
+		// 			ele.classList.add("active");
+		// 		}
+		// 	});
+		// });
+	</script>
+</body>
+</html>
